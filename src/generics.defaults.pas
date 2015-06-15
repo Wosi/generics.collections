@@ -3361,6 +3361,9 @@ var
 begin
   for i := 0 to High(ComparerFactory) do
     ComparerFactory[i].Free;
+    
+  SetLength(ComparerFactory, 0);
+  ComparerFactory := nil;       
 end;
 
 finalization
