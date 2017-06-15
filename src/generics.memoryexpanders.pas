@@ -38,7 +38,7 @@ type
 
   TLinearProbing = class(TProbeSequence)
   public
-    class function Probe(I, {%H-}M, Hash: UInt32): UInt32; static; inline;
+    class function Probe(I, Hash: UInt32): UInt32; static; inline;
 
     const MAX_LOAD_FACTOR = 1;
     const DEFAULT_LOAD_FACTOR = 0.75;
@@ -53,7 +53,7 @@ type
     class var C1: UInt32;
     class var C2: UInt32;
 
-    class function Probe(I, {%H-}M, Hash: UInt32): UInt32; static; inline;
+    class function Probe(I, Hash: UInt32): UInt32; static; inline;
 
     const MAX_LOAD_FACTOR = 0.5;
     const DEFAULT_LOAD_FACTOR = 0.5;
@@ -63,7 +63,7 @@ type
 
   TDoubleHashing = class(TProbeSequence)
   public
-    class function Probe(I, {%H-}M, Hash1: UInt32; Hash2: UInt32 = 1): UInt32; static; inline;
+    class function Probe(I, Hash1: UInt32; Hash2: UInt32 = 1): UInt32; static; inline;
 
     const MAX_LOAD_FACTOR = 1;
     const DEFAULT_LOAD_FACTOR = 0.85;
@@ -91,11 +91,11 @@ const
   // http://oeis.org/A014210
   // http://oeis.org/A203074
   PrimaryNumbersJustBiggerThanPowerOfTwo: array[0..31] of UInt32 = (
-  2,3,5,11,17,37,67,131,257,521,1031,2053,4099,
- 8209,16411,32771,65537,131101,262147,524309,
- 1048583,2097169,4194319,8388617,16777259,33554467,
- 67108879,134217757,268435459,536870923,1073741827,
- 2147483659);
+    2,3,5,11,17,37,67,131,257,521,1031,2053,4099,
+    8209,16411,32771,65537,131101,262147,524309,
+    1048583,2097169,4194319,8388617,16777259,33554467,
+    67108879,134217757,268435459,536870923,1073741827,
+    2147483659);
 
   // Fibonacci numbers
   FibonacciNumbers: array[0..44] of UInt32 = (
@@ -207,7 +207,7 @@ end;
 
 { TLinearProbing }
 
-class function TLinearProbing.Probe(I, M, Hash: UInt32): UInt32;
+class function TLinearProbing.Probe(I, Hash: UInt32): UInt32;
 begin
   Result := (Hash + I)
 end;
@@ -220,14 +220,14 @@ begin
   C2 := 1;
 end;
 
-class function TQuadraticProbing.Probe(I, M, Hash: UInt32): UInt32;
+class function TQuadraticProbing.Probe(I, Hash: UInt32): UInt32;
 begin
   Result := (Hash + C1 * I {%H-}+ C2 * Sqr(I));
 end;
 
 { TDoubleHashingNoMod }
 
-class function TDoubleHashing.Probe(I, M, Hash1: UInt32; Hash2: UInt32): UInt32;
+class function TDoubleHashing.Probe(I, Hash1: UInt32; Hash2: UInt32): UInt32;
 begin
   Result := Hash1 + I * Hash2;
 end;

@@ -10,7 +10,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="TArrayProjectDouble"/>
+      <Title Value="THashMapProject"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -33,9 +33,8 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="TArrayProjectDouble.lpr"/>
+        <Filename Value="thashmapproject.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="TArrayProjectDouble"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -43,19 +42,18 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="TArrayProjectDouble"/>
+      <Filename Value="thashmapproject"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\.."/>
+      <OtherUnitFiles Value="..\..\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">

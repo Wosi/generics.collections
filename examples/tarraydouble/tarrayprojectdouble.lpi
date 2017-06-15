@@ -10,7 +10,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="THashMapCaseInsensitive"/>
+      <Title Value="TArrayProjectDouble"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -33,9 +33,8 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="THashMapCaseInsensitive.lpr"/>
+        <Filename Value="tarrayprojectdouble.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="THashMapCaseInsensitive"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -43,19 +42,13 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="THashMapCaseInsensitive"/>
+      <Filename Value="tarrayprojectdouble"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\.."/>
+      <OtherUnitFiles Value="..\..\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">

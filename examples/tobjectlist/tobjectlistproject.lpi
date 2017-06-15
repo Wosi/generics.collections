@@ -10,7 +10,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="THashMapProject"/>
+      <Title Value="TObjectListProject"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -33,9 +33,8 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="THashMapProject.lpr"/>
+        <Filename Value="tobjectlistproject.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="THashMapProject"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -43,24 +42,13 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="THashMapProject"/>
+      <Filename Value="tobjectlistproject"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\.."/>
+      <OtherUnitFiles Value="..\..\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Parsing>
-      <SyntaxOptions>
-        <SyntaxMode Value="Delphi"/>
-      </SyntaxOptions>
-    </Parsing>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
